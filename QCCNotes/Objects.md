@@ -1,0 +1,8 @@
+- Resource-Based Constrained Delegation attack
+- Abuse ADCS templates that allow enrollment by Domain Computers
+- Exploit ACEs that give special permissions to Domain Computers
+- SPN-in-the-Middle attacks (TM)
+- Maintain domain access (backdoor) when stale computer accounts are not well-audited or scrutinized
+- [ESC14 Scenario A: Write altSecurityIdentities on Target](https://posts.specterops.io/adcs-esc14-abuse-technique-333a004dc2b9#aca0)
+- Unconstrained Delegation attack, *IF* we also have SeEnableDelegationPrivilege (ex. [https://www.netspi.com/blog/technical-blog/network-pentesting/machineaccountquota-is-useful-sometimes/](https://www.netspi.com/blog/technical-blog/network-pentesting/machineaccountquota-is-useful-sometimes/))
+- [https://www.fortinet.com/blog/threat-research/cve-2021-42278-cve-2021-42287-from-user-to-domain-admin-60-seconds](https://www.fortinet.com/blog/threat-research/cve-2021-42278-cve-2021-42287-from-user-to-domain-admin-60-seconds)
