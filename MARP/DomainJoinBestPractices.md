@@ -58,7 +58,7 @@ class:
 - Validated Write to `servicePrincipalName` attribute
 
 #### Additional Permissions for Rename:
-Write on `name`, `displayName`, and `description` attributes
+Write on `samAccountName`, `displayName`, and `description` attributes
 
 ---
 
