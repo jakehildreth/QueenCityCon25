@@ -144,11 +144,17 @@ Now only Administrators can add computers to domain without first precreating a 
 ---
 
 # Prevention:
-## Follow New Domain Join Guidance
-1. **Admin01** Pre-creates the Computer object in a target OU/container
-2. **Admin02** Performs domain join using existing account
-   - System uses `Ldap_modify()` operation (not create)
-3. Computer successfully joins with minimal permissions required
+## Follow New Domain Join Guidance: Prepare
+Configure Trusted Computer Account Owners:
+![h:450](image-1.png)
+
+---
+
+# Prevention:
+## Follow New Domain Join Guidance: Perform
+1. Admin01, *a Trusted Computer Account Owner,* pre-creates the Computer object in a target OU/container
+2. Admin02, *a Computer Joiner,* performs domain join w/minimal privileges required
+3. Admin02's permissions are removed from the computer account.
 <br>
 
 <sub>More details, including required permissions for each admin:
@@ -157,26 +163,29 @@ https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/active-di
 ---
 
 # Prevention:
-## Follow Alternate Domain Join Guidance (more secure!)
-1. On Tier 0 device, provision a new computer object:
-```
-djoin /provision /domain contoso.com /machine NewComputer /savefile offlinedomainjoin.txt
-```
+## Offline Domain Join (more secure!)
+1. On Tier 0 device, using a Trusted Computer Account Owner, provision a new computer object:
+    ```
+    djoin /provision /domain contoso.com /machine NewComputer /savefile offlinedomainjoin.txt
+    ```
 2. On physical computer, complete the join:
-```
-djoin /requestODJ /loadfile offlinedomainjoin.txt /windowspath %SystemRoot% /localos
-```
-<br>
+    ```
+    djoin /requestODJ /loadfile offlinedomainjoin.txt /windowspath %SystemRoot% /localos
+    ```
 
+### No additional permissions are required!
 <sub>More details:
 https://learn.microsoft.com/en-us/windows-server/remote/remote-access/directaccess/directaccess-offline-domain-join</sub>
 
 ---
 
 # Remediation:
-
-
+## Find Inactive and Suspicious Computer Objects:
+Huy Kha (aka DebugPrivilege) wrote an article with an easy-to-use script that finds computer accounts tha look *funky* 
+![](image-2.png)
+https://medium.com/@Debugger/machines-gone-rogue-a01d726f5f10
 
 ---
 
 # Detection
+## Monitor
