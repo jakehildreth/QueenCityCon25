@@ -103,7 +103,7 @@ Security Consultant
   * Jake: 80% at default
   * John: never seen it set properly when first engaging a customer
 - Why hasn't this been fixed?
-  * Relatively outside security circles
+  * Relatively unknown outside security circles
   * Conflicting hardening guidance
   * Operations > Security
 
