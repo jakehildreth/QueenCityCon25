@@ -73,7 +73,7 @@ Security Consultant
 
 <!-- Jake -->
 
---- 
+---
 
 # Why This Matters:
 <!-- John -->
@@ -96,6 +96,9 @@ Security Consultant
 ---
 
 # The Attacker's Advantage
+* Machine accounts tend to be less scrutinized
+* Machine accounts usually have different permissions
+* Controlling an SPN is a powerful attacker primitive
 <!-- John -->
 
 ---
@@ -115,6 +118,38 @@ Security Consultant
 
 # **A Demo or Two**
 <!-- JOHN DEMOS HERE -->
+
+---
+
+# ACL Abuse
+* Look for extra permissions granted to Domain Computers
+* Common to see Domain Computers added to privileged groups
+* Create a machine account and you can abuse those permissions
+<!-- John -->
+
+---
+
+# RBCD Abuse
+* "Resource-Based Constrained Delegation"
+* Turn a "GenericWrite" permission on a computer object into a full compromise
+* https://eladshamir.com/2019/01/28/Wagging-the-Dog.html
+<!-- John -->
+
+---
+
+# AD Certificate Services Abuse
+* Domain Computers are often allowed to enroll templates (ESC1)
+* Turn `altSecurityIdentities` write access into a full compromise (ESC14)
+<!-- John -->
+
+---
+
+# Other Attacks
+* Persistence using stale machine accounts
+* Unconstrained Delegation (need SeEnableDelegationPrivilege)
+* "SPN-in-the-Middle"
+* "DumpGuard" scenario
+<!-- John -->
 
 ---
 
@@ -181,11 +216,24 @@ https://learn.microsoft.com/en-us/windows-server/remote/remote-access/directacce
 
 # Remediation:
 ## Find Inactive and Suspicious Computer Objects:
-Huy Kha (aka DebugPrivilege) wrote an article with an easy-to-use script that finds computer accounts tha look *funky* 
+Huy Kha (aka DebugPrivilege) wrote an article with an easy-to-use script that finds computer accounts tha look *funky*
 ![](image-2.png)
 https://medium.com/@Debugger/machines-gone-rogue-a01d726f5f10
 
 ---
 
+![bg right h:450](images/event_id_4741.png)
+
 # Detection
-## Monitor
+## Monitor for New Machine Accounts
+- Event ID 4741 is logged on Domain Controllers
+- (you ARE collecting logs from ALL your domain controllers... right!?)
+
+---
+
+# Detection
+## Investigate Machine Accounts
+- The machine account creator is indicated in the `mS-DS-CreatorSID` field
+- By default the user account cannot delete the machine account it created
+- https://learn.microsoft.com/en-us/windows/win32/adschema/a-ms-ds-creatorsid
+![](images/adexplorer_msds-creatorsid.png)
