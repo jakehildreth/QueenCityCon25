@@ -75,11 +75,6 @@ Security Consultant
 
 ---
 
-# Why This Matters:
-<!-- John -->
-
----
-
 # **Some Context**
 
 ---
@@ -91,7 +86,7 @@ Security Consultant
 - Service Principal Names (SPNs)
   * Tells others what services are available
 * Note: local admin password is NOT the computer account password
-<!-- Jake -->
+<!-- John -->
 
 ---
 
@@ -103,7 +98,7 @@ Security Consultant
 
 ---
 
-# Real-World Context
+# Real-World Experience
 - How common is this?
   * Jake: 80% at default
   * John: never seen it set properly when first engaging a customer
@@ -112,7 +107,7 @@ Security Consultant
   * Conflicting hardening guidance
   * Operations > Security
 
-<!-- Jake -->
+<!-- Jake & John -->
 
 ---
 
