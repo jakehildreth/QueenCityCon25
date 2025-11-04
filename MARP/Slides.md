@@ -111,7 +111,7 @@ Security Consultant
 
 ---
 
-# **A Demo or Two**
+# **A Demo or Two or Three**
 <!-- JOHN DEMOS HERE -->
 
 ---
@@ -157,6 +157,8 @@ Security Consultant
 # Prevention:
 ## Set `ms-DS-MachineAccountQuota` to 0
 ```powershell
+#requires -Modules ActiveDirectory
+
 # Set variables
 $MAQ = 'ms-DS-MachineAccountQuota'
 $Domain = Get-ADDomain -Identity example.com
@@ -194,7 +196,7 @@ https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/active-di
 
 # Prevention:
 ## Offline Domain Join (more secure!)
-1. On Tier 0 device, using a Trusted Computer Account Owner, provision a new computer object:
+1. Using a _Trusted Computer Account Owner_ with appropriate permissions, provision a new computer object:
     ```
     djoin /provision /domain contoso.com /machine NewComputer /savefile offlinedomainjoin.txt
     ```
@@ -211,18 +213,18 @@ https://learn.microsoft.com/en-us/windows-server/remote/remote-access/directacce
 
 # Remediation:
 ## Find Inactive and Suspicious Computer Objects:
-Huy Kha (aka DebugPrivilege) wrote an article with an easy-to-use script that finds computer accounts tha look *funky*
+Huy Kha (aka DebugPrivilege) wrote an article with an easy-to-use script that finds computer accounts that look *funky*
 ![](image-2.png)
 https://medium.com/@Debugger/machines-gone-rogue-a01d726f5f10
 
 ---
 
-![bg right h:450](images/event_id_4741.png)
+![bg right 75%](images/event_id_4741.png)
 
 # Detection
 ## Monitor for New Machine Accounts
 - Event ID 4741 is logged on Domain Controllers
-- (you ARE collecting logs from ALL your domain controllers... right!?)
+* (you ARE collecting logs from ALL your domain controllers... right!?)
 
 ---
 
@@ -232,3 +234,73 @@ https://medium.com/@Debugger/machines-gone-rogue-a01d726f5f10
 - By default the user account cannot delete the machine account it created
 - https://learn.microsoft.com/en-us/windows/win32/adschema/a-ms-ds-creatorsid
 ![](images/adexplorer_msds-creatorsid.png)
+
+---
+
+# **Outro** 🎸
+
+---
+
+# Key Takeaways
+- Design decisions from 25 years ago aren't always so great
+- Computer accounts are more dangerous than most people realize
+- There are multiple attack paths from COMPUTER$ to $
+- Defense requires technical controls AND organizational change
+
+---
+
+# Call to Action
+
+- Check your environment TODAY
+- Start the conversation with your security and identity teams
+- Don't wait for an incident to fix this
+
+---
+
+<style scoped>
+div.twocols {
+  margin-top: 35px;
+  column-count: 2;
+}
+div.twocols p:first-child,
+div.twocols h1:first-child,
+div.twocols h2:first-child,
+div.twocols ul:first-child,
+div.twocols ul li:first-child,
+div.twocols ul li p:first-child {
+  margin-top: 0 !important;
+}
+div.twocols p.break {
+  break-before: column;
+  margin-top: 0;
+}
+</style>
+
+# Thanks
+<div class="twocols">
+
+## John Askew
+- item
+- item
+- item
+- item
+
+## Jake Hildreth
+- item
+- item
+- item
+- item
+</div>
+
+---
+
+# Thanks!
+
+| | John | Jake |
+|-|-|-|
+| Email | john@terrapinlabs.io | jake@jakehildreth.com |
+| Web | terrapinlabs.io | jakehildreth.com |
+| GitHub | sk3w | jakehildreth |
+| LinkedIn | /in/sk3w | /in/jakehildreth |
+| BlueSky | @sk3w.bsky.social | @dotdot.horse |
+| QR (if you trust us 😉) | | ![w:175](image-3.png) |
