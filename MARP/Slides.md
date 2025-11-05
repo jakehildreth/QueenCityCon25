@@ -14,7 +14,7 @@ transition: fade-out
 
 ---
 
-![bg right:60% 60%](1650739011354.jpeg)
+![bg right:60% 60%](images/john.png)
 # John
 Hacker
 Red Team Lead
@@ -75,6 +75,15 @@ Security Consultant
 
 ---
 
+# Why This Matters:
+* MACHINE$ accounts are valuable to attackers!
+* MANY attack chains need an attacker-controlled machine account
+* Defaults = easier to create one than to compromise one
+* Remove defaults -> break attack chains
+<!-- John -->
+
+---
+
 # **Some Context**
 
 ---
@@ -86,14 +95,16 @@ Security Consultant
 - Service Principal Names (SPNs)
   * Tells others what services are available
 * Note: local admin password is NOT the computer account password
-<!-- John -->
+<!-- Jake -->
 
 ---
 
 # The Attacker's Advantage
-* Machine accounts tend to be less scrutinized
-* Machine accounts usually have different permissions
-* Controlling an SPN is a powerful attacker primitive
+- Machine accounts...
+  * tend to be less scrutinized (evasion, persistence)
+  * often have different permissions (privilege escalation)
+  * can be created without creds using relaying (initial access)
+* Controlling an SPN is a powerful attack primitive!
 <!-- John -->
 
 ---
@@ -118,7 +129,8 @@ Security Consultant
 
 # ACL Abuse
 * Look for extra permissions granted to Domain Computers
-* Common to see Domain Computers added to privileged groups
+  * Added to privileged groups?
+  * Access to other AD objects via ACLs?
 * Create a machine account and you can abuse those permissions
 <!-- John -->
 
@@ -132,9 +144,14 @@ Security Consultant
 
 ---
 
-# AD Certificate Services Abuse
+# ADCS Abuse (DEMO)
+* Active Directory Certificate Services is EASY to misconfigure
 * Domain Computers are often allowed to enroll templates (ESC1)
-* Turn `altSecurityIdentities` write access into a full compromise (ESC14)
+* Turn `altSecurityIdentities` write access into a full compromise (ESC14A)
+  - (The default Domain Computers cert template meets the other attack requirements)
+* References:
+  - https://posts.specterops.io/certified-pre-owned-d95910965cd2
+  - https://posts.specterops.io/adcs-esc14-abuse-technique-333a004dc2b9
 <!-- John -->
 
 ---
