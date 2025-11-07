@@ -17,3 +17,8 @@ Notes, slides, and other resources from John &amp; Jake's presentation @ Queen C
 * Certipy: https://github.com/ly4k/Certipy
 * Impacket: https://github.com/fortra/impacket
 * NetExec: https://github.com/Pennyw0rth/NetExec
+
+# Images:
+* Cartoon Man Being Slapped By Money From The Computer: https://commons.wikimedia.org/wiki/File:Cartoon_Man_Being_Slapped_By_Money_From_The_Computer.svg
+* Phone: https://commons.wikimedia.org/wiki/File:Phone.svg
+* Sushi: https://commons.wikimedia.org/wiki/File:Yummp_hk_lunchbox.jpg
