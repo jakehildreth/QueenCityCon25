@@ -105,7 +105,7 @@ Next: John
 ---
 
 ![bg right:60% 80%](Creed.jpg)
-# Also Popular 25 Years Ago:
+# This Also Made Sense 25 Years Ago:
 
 
 ---
@@ -311,7 +311,6 @@ Next: Jake
 ## Follow New Domain Join Guidance: Perform
 1. Admin01, *a Trusted Computer Account Owner,* pre-creates the Computer object in a target OU/container
 2. Admin02, *a Computer Joiner,* performs domain join w/minimal privileges required
-3. Admin02's permissions are removed from the computer account.
 <br>
 
 <sub>More details, including required permissions for each admin:
