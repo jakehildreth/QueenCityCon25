@@ -452,13 +452,8 @@ Next: Both
 ---
 
 # Resources
-
-<sub>Wagging the Dog by Elad Shamir: https://eladshamir.com/2019/01/28/Wagging-the-Dog.html</sub>
-<sub>Certified Pre-Owned by Will & Lee: https://posts.specterops.io/certified-pre-owned-d95910965cd2</sub>
-<sub>ADCS ESC14 Abuse Technique: https://posts.specterops.io/adcs-esc14-abuse-technique-333a004dc2b9</sub>
-<sub>Active Directory domain join permissions: https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/active-directory-domain-join-permissions</sub>
-<sub>DirectAccess Offline Domain Join: https://learn.microsoft.com/en-us/windows-server/remote/remote-access/directaccess/directaccess-offline-domain-join</sub>
-<sub>Machines Gone Rogue by Huy Kha: https://medium.com/@Debugger/machines-gone-rogue-a01d726f5f10</sub>
+https://github.com/jakehildreth/QueenCityCon25 
+![bg right:40% 60%](image-5.png)
 
 <!--
 Both
@@ -477,4 +472,4 @@ Next: Both
 | GitHub | sk3w | jakehildreth |
 | LinkedIn | /in/sk3w | /in/jakehildreth |
 | BlueSky | @sk3w.bsky.social | @dotdot.horse |
-| QR 😉 | | ![w:175](image-3.png) |
+| QR 😉 | ![w:175](image-4.png)| ![w:175](image-3.png) |
