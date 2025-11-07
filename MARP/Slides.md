@@ -212,7 +212,7 @@ Next: John
 
 ---
 
-# Privilege Abuse
+# Demo: Privilege Abuse
 * Look for extra permissions granted to Domain Computers
   * Added to privileged groups?
   * Access to other AD objects via ACLs?
@@ -226,8 +226,9 @@ Next: John
 
 ---
 
-# Delegation Abuse
-* "Resource-Based Constrained Delegation"
+# Demo: Delegation Abuse
+* Active Directory account delegation is EASY to misconfigure
+* "Resource-Based Constrained Delegation" is maybe the most commonly abused
 * Turn a "GenericWrite" permission on a computer object into a full compromise
 * https://eladshamir.com/2019/01/28/Wagging-the-Dog.html
 
@@ -239,7 +240,17 @@ Next: John
 
 ---
 
-# AD CS Abuse
+![bg contain](images/rbcd_abuse.png)
+
+<!--
+John
+
+Next: John
+-->
+
+---
+
+# Demo: AD CS Abuse
 * Active Directory Certificate Services is EASY to misconfigure
 * Domain Computers are often allowed to enroll templates (ESC1)
 * Turn `altSecurityIdentities` write access into a full compromise (ESC14A)
@@ -256,12 +267,14 @@ Next: John
 
 ---
 
-# Other Attacks
-* Persistence using stale machine accounts
-* Unconstrained Delegation (need SeEnableDelegationPrivilege)
+# Many Other Attacks
+* Persistence using "stale" machine accounts
+* Unconstrained Delegation & Constrained Delegation attacks
+* CVE-2021-42278 & 42287 ("noPAC" privilege escalation)
 * "SPN-in-the-Middle"
-* "DumpGuard" scenario
+* "DumpGuard" technique
   - https://specterops.io/blog/2025/10/23/catching-credential-guard-off-guard/
+* Whatever next thing comes out
 
 <!--
 John
