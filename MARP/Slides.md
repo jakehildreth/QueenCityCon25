@@ -150,11 +150,12 @@ Next: John
   * often have different permissions (privilege escalation)
   * can be created without creds using relaying (initial access)
 * Controlling an SPN is a powerful attack primitive!
+  - (You are a legitimate Active Directory service)
 
 <!--
 John
 
-Next: John & John
+Next: Jake & John
 -->
 
 ---
@@ -193,6 +194,24 @@ Next: John
 
 ---
 
+![bg right:30% contain](images/goad.png)
+# Demo Environment
+- Game of Active Directory (by Mayfly277)
+  - https://github.com/Orange-Cyberdefense/GOAD
+- Tools used:
+  - https://github.com/fortra/impacket
+  - https://github.com/Pennyw0rth/NetExec
+  - https://github.com/CravateRouge/bloodyAD
+  - https://github.com/ly4k/Certipy
+
+<!--
+John
+
+Next: John
+-->
+
+---
+
 # Privilege Abuse
 * Look for extra permissions granted to Domain Computers
   * Added to privileged groups?
@@ -207,7 +226,7 @@ Next: John
 
 ---
 
-# RBCD Abuse
+# Delegation Abuse
 * "Resource-Based Constrained Delegation"
 * Turn a "GenericWrite" permission on a computer object into a full compromise
 * https://eladshamir.com/2019/01/28/Wagging-the-Dog.html
@@ -224,7 +243,7 @@ Next: John
 * Active Directory Certificate Services is EASY to misconfigure
 * Domain Computers are often allowed to enroll templates (ESC1)
 * Turn `altSecurityIdentities` write access into a full compromise (ESC14A)
-  - (The default Domain Computers cert template meets the other attack requirements)
+  - (The default Domain Computers cert template meets all other attack requirements)
 * References:
   - https://posts.specterops.io/certified-pre-owned-d95910965cd2
   - https://posts.specterops.io/adcs-esc14-abuse-technique-333a004dc2b9
@@ -242,6 +261,7 @@ Next: John
 * Unconstrained Delegation (need SeEnableDelegationPrivilege)
 * "SPN-in-the-Middle"
 * "DumpGuard" scenario
+  - https://specterops.io/blog/2025/10/23/catching-credential-guard-off-guard/
 
 <!--
 John
