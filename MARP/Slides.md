@@ -5,7 +5,7 @@ class:
 transition: fade-out
 ---
 
-![bg right:60% 60%](Cartoon_Man_Being_Slapped_By_Money_From_The_Computer.png)
+![bg right:60% 60%](images/Cartoon_Man_Being_Slapped_By_Money_From_The_Computer.png)
 # Making $ With COMPUTER$
 ## Queen City Con 0x3
 ### John Askew & Jake Hildreth
@@ -33,7 +33,7 @@ Next: Jake
 ---
 
 # Jake
-![bg right:60% 60%](1719237510669.jpeg)
+![bg right:60% 60%](images/1719237510669.jpeg)
 Defender
 Security Consultant
 
@@ -46,7 +46,8 @@ Next: John
 ---
 
 # Agenda
-![bg right:60% 90%](<Pasted image 20250705093555.png>)
+
+![bg right:60% 90%](images/Agenda.png)
 - The Problem
 - Some Context
 - A Demo or Two
@@ -104,7 +105,7 @@ Next: John
 
 ---
 
-![bg right:60% 80%](Creed.jpg)
+![bg right:60% 80%](images/Creed.jpg)
 # This Also Made Sense 25 Years Ago:
 
 
@@ -317,7 +318,7 @@ Next: Jake
 ---
 # Prevention:
 ## Restrict `SeMachineAccountPrivilege`
-![h:450](image.png)
+![h:450](images/image.png)
 
 <!--
 Jake
@@ -330,7 +331,7 @@ Next: Jake
 # Prevention:
 ## Follow New Domain Join Guidance: Additional Prep
 Configure Trusted Computer Account Owners:
-![h:450](image-1.png)
+![h:450](images/image-1.png)
 
 <!--
 Jake
@@ -413,7 +414,7 @@ Next: Jake
 # Remediation:
 ## Find Inactive and Suspicious Computer Objects:
 Huy Kha (aka DebugPrivilege) wrote an article with an easy-to-use script that finds computer accounts that look *funky*
-![](image-2.png)
+![](images/image-2.png)
 https://medium.com/@Debugger/machines-gone-rogue-a01d726f5f10
 
 <!--
@@ -434,7 +435,7 @@ Next: John
 
 ---
 
-![bg right](Takeaway.jpg)
+![bg right](images/Takeaway.jpg)
 # Key Takeaways
 - Design decisions from 25 years ago aren't always so great
 - Computer accounts are more dangerous than most people realize
@@ -449,7 +450,7 @@ Next: Jake
 
 ---
 
-![bg right:30% 90%](Phone.png)
+![bg right:30% 90%](images/Phone.png)
 # Call to Action
 
 - Check your environment TODAY
@@ -466,7 +467,7 @@ Next: Both
 
 # Resources
 https://github.com/jakehildreth/QueenCityCon25 
-![bg right:40% 60%](image-5.png)
+![bg right:40% 60%](images/image-5.png)
 
 <!--
 Both
@@ -485,4 +486,4 @@ Next: Both
 | GitHub | sk3w | jakehildreth |
 | LinkedIn | /in/sk3w | /in/jakehildreth |
 | BlueSky | @sk3w.bsky.social | @dotdot.horse |
-| QR 😉 | ![w:175](image-4.png)| ![w:175](image-3.png) |
+| QR 😉 | ![w:175](images/image-4.png)| ![w:175](images/image-3.png) |
