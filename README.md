@@ -2,13 +2,14 @@
 Notes, slides, and other resources from John &amp; Jake's presentation @ Queen City Con 0x3: "Making $ with COMPUTER$"
 
 # Slides
+PDF: https://raw.github.com/jakehildreth/QueenCityCon25/main/MARP/Slides.pdf
 
 # Links and Sites
 * Active Directory domain join permissions: https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/active-directory-domain-join-permissions
-* ADCS ESC14 Abuse Technique: https://posts.specterops.io/adcs-esc14-abuse-technique-333a004dc2b9
-* Certified Pre-Owned by Will & Lee: https://posts.specterops.io/certified-pre-owned-d95910965cd2
+* ADCS ESC14 Abuse Technique by Jonas Bülow Knudsen: https://posts.specterops.io/adcs-esc14-abuse-technique-333a004dc2b9
+* Certified Pre-Owned by Will Schroeder & Lee Chagolla-Christensen: https://posts.specterops.io/certified-pre-owned-d95910965cd2
 * DirectAccess Offline Domain Join: https://learn.microsoft.com/en-us/windows-server/remote/remote-access/directaccess/directaccess-offline-domain-join
-* Game of Active Directory: https://github.com/Orange-Cyberdefense/GOAD
+* Game of Active Directory by MayFly277: https://github.com/Orange-Cyberdefense/GOAD
 * Machines Gone Rogue by Huy Kha: https://medium.com/@Debugger/machines-gone-rogue-a01d726f5f10
 * Wagging the Dog by Elad Shamir: https://eladshamir.com/2019/01/28/Wagging-the-Dog.html
 
